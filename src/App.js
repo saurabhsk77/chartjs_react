@@ -1,25 +1,22 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import "./App.css";
+import BarGraph from "./graphs/BarGraph";
+import DoughNut from "./graphs/DoughNut";
+import LineGraph from "./graphs/LineGraph";
+// import Dropdown from "./components/DropDown";
 
-function App() {
+export function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <div className="header">
+        <span>Graph Visualization in REACT</span>
+      </div>
+      <div className="charts">
+        <LineGraph />
+        <BarGraph />
+        <DoughNut />
+        {/* <Dropdown /> */}
+      </div>
+    </>
   );
 }
-
-export default App;
